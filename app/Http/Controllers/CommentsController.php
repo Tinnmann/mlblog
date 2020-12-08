@@ -9,17 +9,18 @@ use App\Models\Comment;
 
 class CommentsController extends Controller
 {
-    public function store(Article $article){
+    public function store(Article $article, User $user){
 
     	request()->validate([
     		'body'=>'required|max:2000'
     	]);
-
+        
     	Comment::create([
     		'body'=>request('body'),
     		'article_id'=>$article->id,
-    		'user_id'=>auth()->id()
+    		'user_id'=>$auth()->user()->id
     	]);
 
     	return back();
+    }
 }

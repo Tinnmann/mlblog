@@ -18,4 +18,15 @@ class Article extends Model
     public function comment(){
     	return $this->hasMany(Comment::class);
     }
+
+    // public function addComment($body){
+    	
+    // 	// $this->comment->create(['body'=>$body]);
+
+    // 	// Comment::create([
+    // 	// 	'body'=>$body,
+    // 	// 	'article_id'=>$this->id,
+    // 	// 	'user_id'=>$auth()->id()
+    // 	// ]);    	
+    // }
 }

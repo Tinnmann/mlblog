@@ -15,13 +15,13 @@
                
                     @include ('_publish-article-form')
                 
-                    <div class="border border-gray-300 rounded-lg">
+                    <div class="border border-orange-300 rounded-lg">
                         @foreach($articles as $article)
                             @include ('_article')
                         @endforeach
                     </div>
                 </div>
-                <div class="lg:w-1/6 bg-purple-100 rounded-lg p-4">
+                <div class="lg:w-1/6 border border-green-100 rounded-lg p-4">
                     @include ('_members-list')
                 </div>
                 

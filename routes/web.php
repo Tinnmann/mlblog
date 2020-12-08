@@ -24,9 +24,9 @@ Route::get('/', function () {
 
 Route::post('/articles', [ArticlesController::class, 'store']);
 
-Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+Route::post('/articles/{article}/comments', '\App\Http\Controllers\CommentsController@store');
 
-Route::post('/articles/{article}/comments', [CommentsController::class, 'store']);
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard', ['articles'=>Article::orderBy('id', 'DESC')->get()], 
