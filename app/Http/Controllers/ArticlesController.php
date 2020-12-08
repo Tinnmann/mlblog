@@ -26,14 +26,9 @@ class ArticlesController extends Controller
 
     public function show($id){
         $article = Article::find($id);
-        //$users = User::all();
+        
 
         return view('/show', ['article'=>$article], ['users'=>User::all()]);
     }
 
-    // public function index(){
-    //     return view('dashboard',[
-    //         'articles'=>auth()->user()->timeline()
-    //     ]);
-    // }
 }

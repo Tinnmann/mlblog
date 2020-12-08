@@ -11,11 +11,11 @@
                 <div class="lg:w-1/6">
                     @include ('_side-nav')
                 </div>
-                <div class="lg:flex-1 lg:mx-10" style="max-width:700px">
-                    <div class="border border-gray-300 rounded-lg">
+                <div class="lg:flex-1 lg:mx-10 bg-white" style="max-width:700px">
+                    <div class=" mb-8">
                         {{ $article->title }}
                         <br>
-                        By:{{ $article->user->name }}
+                        By: {{ $article->user->name }}
                         <br>
                         {{ $article->body }}
                         <br>
@@ -23,11 +23,16 @@
                     </div>
                     <h2>Comments:</h2>
                     
-                    <div class="border border-gray-300 rounded-lg">
+                    <div class="border border-gray-300 rounded-lg bg-grey mb-8">
                         <ul>
                         @foreach($article->comment as $comment)
                         
-                            <li> {{$comment->body}}</li>
+                            <li>
+                                <strong>
+                                    {{ $comment->created_at->diffForHumans() }}: &nbsp
+                                </strong>
+                                    {{$comment->body}}
+                            </li>
                             <hr>
                             
                         @endforeach
@@ -36,7 +41,7 @@
 
                     </div> 
                     <div class="border border-purple-400 rounded-lg py-6 px-8 mb-8">
-                        <form method="POST" action="/comments">
+                        <form method="POST" action="/articles/{article}/comments">
                             @csrf
 
                             <textarea name="body" class="w-full " placeholder="Add a comment" required></textarea>
@@ -52,7 +57,7 @@
 
                     
                 </div>
-                <div class="lg:w-1/6 bg-orange-100 rounded-lg p-4">
+                <div class="lg:w-1/6 bg-purple-100 rounded-lg p-4">
                     @include ('_members-list')
                 </div>
                 

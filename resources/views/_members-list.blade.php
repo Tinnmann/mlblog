@@ -1,4 +1,4 @@
-<h3 class="font-bold text-xlg mb-4">Members</h3>
+<h2 class="font-bold text-xlg mb-4">Members</h2>
 <ul>
 
 	@foreach ($users as $user)

@@ -12,13 +12,13 @@ class CommentsController extends Controller
     public function store(Article $article){
 
     	request()->validate([
-    		'body'=>'required|max:255'
+    		'body'=>'required|max:2000'
     	]);
 
     	Comment::create([
+    		'body'=>request('body'),
     		'article_id'=>$article->id,
-    		'user_id'=>auth()->id(),
-    		'body'=>request('body')
+    		'user_id'=>auth()->id()
     	]);
 
     	return back();
