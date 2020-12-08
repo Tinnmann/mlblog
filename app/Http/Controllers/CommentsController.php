@@ -9,7 +9,7 @@ use App\Models\Comment;
 
 class CommentsController extends Controller
 {
-    public function store(Article $article, User $user){
+    public function store(Article $article){
 
     	request()->validate([
     		'body'=>'required|max:2000'
@@ -17,8 +17,7 @@ class CommentsController extends Controller
         
     	Comment::create([
     		'body'=>request('body'),
-    		'article_id'=>$article->id,
-    		'user_id'=>$auth()->user()->id
+    		'article_id'=>$article->id
     	]);
 
     	return back();
