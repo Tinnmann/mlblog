@@ -19,12 +19,13 @@
                 font-family: 'Nunito';
             }
         </style>
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0 module" id="module">
 
         <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-            <h1 style="font-size:100px">MLBlog</h1>
+            <h1 style="font-size:100px ; color: #FFF;">MLBlog</h1>
         </div>
          
             <div class="fixed top-0 right-0 px-6 py-4 sm:block">
@@ -40,5 +41,6 @@
             </div>
            
         </div>
+        <script src="/js/script.js"></script>
     </body>
 </html>

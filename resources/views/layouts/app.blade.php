@@ -12,6 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <link rel="stylesheet" href="/css/style2.css">
 
         @livewireStyles
 
@@ -31,13 +32,16 @@
 
             <!-- Page Content -->
             <main>
+                <div id="module" class="module">
                 {{ $slot }}
+                </div>
             </main>
         </div>
 
         @stack('modals')
 
         @livewireScripts
+        <script src="/js/script.js"></script>
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </body>
 </html>

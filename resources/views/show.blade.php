@@ -41,7 +41,7 @@
 
                     </div> 
                     <div class="border border-purple-400 rounded-lg py-6 px-8 mb-8">
-                        <form method="POST" action="/articles/{article}/comments">
+                        <form method="POST" action="/articles/{{ $article->id }}/comments">
                             @csrf
 
                             <textarea name="body" class="w-full " placeholder="Add a comment" required></textarea>
