@@ -3,7 +3,7 @@
 	@foreach ($users as $user)
 	<li class="mb-4">
 		<div class="flex items center text-sm">
-			<img src="{{ $user->avatar }}" alt="pic" class="mr-2">
+			<img src="https://i.pravatar.cc/50?u={{ $user->email }}" alt="" class="mr-2">
 			{{ $user->name }}
 		</div>
 	</li>

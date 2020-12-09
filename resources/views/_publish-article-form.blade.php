@@ -9,7 +9,7 @@
         <hr class="my-4">
 
         <footer class="flex justify-between text-sm">
-            <img src="https://i.pravatar.cc/40u={{ auth()->user()->email }}" alt="pic" class="mr-2">
+            <img src="{{ auth()->user()->email }}" alt="" class="mr-2">
             
             <button type="submit" class="bg-purple-500 rounded-lg shadow py-2 px-2 text-white">New Article</button>
         </footer>

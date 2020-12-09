@@ -71,4 +71,8 @@ class User extends Authenticatable
     public function comment(){
         return $this->hasMany(Comment::class);
     }
+
+    public function getAvatar(){
+        return "https://i.pravatar.cc/40u=" . $this->email;
+    }
 }
