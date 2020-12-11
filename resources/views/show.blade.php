@@ -13,23 +13,23 @@
                 </div>
                 <div class="lg:flex-1 lg:mx-10 bg-white" style="max-width:700px">
                     <div class=" mb-8 py-6 px-8">
-                        <h1><strong>{{ $article->title }}</strong></h1>
+                        <h1 class="mb-2"><strong>{{ $article->title }}</strong></h1>
                         
-                        <h3>By: {{ $article->user->name }}</h3>
+                        <h3 class="mb-2">By: {{ $article->user->name }}</h3>
                         
                         <p>{{ $article->body }}</p>
                         
 
                     </div>
-                    <div class="px-8">
+                    <div class="px-8 mb-2">
                         <h2>Comments:</h2>
                     </div>
                     
-                    <div class="border border-gray-300 rounded-lg bg-grey mb-8 py-6 px-8">
+                    <div class="border border-gray-300 lg:mx-10 mb-8 py-6 px-8">
                         <ul>
                         @foreach($article->comment as $comment)
                         
-                            <li>
+                            <li class="p-4">
                                 <strong>
                                     {{ $comment->created_at->diffForHumans() }}: &nbsp
                                 </strong>
@@ -42,7 +42,7 @@
                            
 
                     </div> 
-                    <div class="border border-purple-400 rounded-lg py-6 px-8 mb-8">
+                    <div class="border border-purple-400 rounded-lg lg:mx-10 py-6 px-8 mb-8">
                         <form method="POST" action="/articles/{{ $article->id }}/comments">
                             @csrf
 
