@@ -1,4 +1,4 @@
-<div class="flex p-4 border-b border-b-orange-400">
+<div class="flex p-4 ">
     <div class="mr-2 flex-shrink-0">
         <img src="https://i.pravatar.cc/50?u={{ $article->user->email }}" alt="" class="mr-2">
     </div>

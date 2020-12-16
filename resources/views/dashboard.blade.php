@@ -13,7 +13,7 @@
                     @include ('_side-nav')
                 </div>
 
-                <div class="lg:flex-1 lg:mx-10" style="max-width:700px">
+                <div class="lg:flex-1 lg:mx-10" >
                
                     @include ('_publish-article-form')
 
